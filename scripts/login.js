@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
             showToast('Boas-vindas de volta! Redirecionando para o painel...');
             
             setTimeout(() => {
-                window.location.href = '../pages/bilhete.html';
+                window.location.href = '../pages/home.html';
             }, 2000);
         }
     });
