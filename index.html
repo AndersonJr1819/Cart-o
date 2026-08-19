@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso - Bilhete Único</title>
+    <link rel="stylesheet" href="Styles/Login.css">
+    <script src="scripts/login.js" defer></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="login-form">
+            <h2>Bem-vindo</h2>
+            <p>Entre com seus dados</p>
+            <input type="text" placeholder="RA ou CPF" required>
+            <input type="password" placeholder="Senha" required>
+            <button type="submit">Entrar</button>
+            <p class="toggle-link">Não tem conta? <span onclick="toggleForm()"><a href="pages/cadastro.html">Cadastre-se aqui</a></span></p>
+        </form>
+
+        <form id="register-form" style="display: none;">
+            <h2>Criar Conta</h2>
+            <p>Preencha os dados escolares</p>
+            <input type="text" placeholder="Nome Completo" required>
+            <input type="text" placeholder="RA ou CPF" required>
+            <input type="password" placeholder="Crie uma senha" required>
+            <button type="submit">Finalizar Cadastro</button>
+            <p class="toggle-link">Já possui conta? <span onclick="toggleForm()">Entrar</span></p>
+        </form>
+    </div>
+
+</body>
+
+</html>
