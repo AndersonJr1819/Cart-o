@@ -4,34 +4,154 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acesso - Bilhete Único</title>
-    <link rel="stylesheet" href="Styles/Login.css">
-    <script src="scripts/login.js" defer></script>
+    <title>Bilhete Único Estudantil</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <div class="container">
-
-        <form id="login-form">
+    <section id="login-view" class="view-section active">
+        <form id="login-form" class="form-box">
             <h2>Bem-vindo</h2>
             <p>Entre com seus dados</p>
             <input type="text" placeholder="RA ou CPF" required>
             <input type="password" placeholder="Senha" required>
-            <button type="submit">Entrar</button>
-            <p class="toggle-link">Não tem conta? <span onclick="toggleForm()"><a href="pages/cadastro.html">Cadastre-se aqui</a></span></p>
+            <button type="submit" class="btn-primary">Entrar</button>
+            <p class="toggle-link">Não tem conta? <span onclick="switchView('register-view')">Cadastre-se aqui</span>
+            </p>
         </form>
+    </section>
 
-        <form id="register-form" style="display: none;">
+
+    <section id="register-view" class="view-section">
+        <form id="register-form" class="form-box">
             <h2>Criar Conta</h2>
             <p>Preencha os dados escolares</p>
             <input type="text" placeholder="Nome Completo" required>
             <input type="text" placeholder="RA ou CPF" required>
             <input type="password" placeholder="Crie uma senha" required>
-            <button type="submit">Finalizar Cadastro</button>
-            <p class="toggle-link">Já possui conta? <span onclick="toggleForm()">Entrar</span></p>
+            <button type="submit" class="btn-primary">Finalizar Cadastro</button>
+            <p class="toggle-link">Já possui conta? <span onclick="switchView('login-view')">Entrar</span></p>
         </form>
-    </div>
+    </section>
+
+
+    <section id="home-view" class="view-section">
+        <header class="app-header">
+            <div class="user-profile-info">
+                <div class="user-welcome">
+                    <span class="welcome-label">Bem-vindo de volta,</span>
+                    <h1 id="student-name">Kayk Martins</h1>
+                </div>
+            </div>
+            <a href="#" onclick="switchView('login-view'); return false;" class="logout-btn"
+                title="Encerrar Sessão">Sair</a>
+        </header>
+
+        <div class="card-flip-container" onclick="flipCard()" role="button" aria-label="Virar cartão virtual">
+            <div class="virtual-card">
+                <div class="card-face card-front">
+                    <div class="card-top">
+                        <span class="card-brand">BILHETE ÚNICO</span>
+                        <span class="card-type">ESTUDANTE</span>
+                    </div>
+                    <div class="card-chip">
+                        <div class="chip-line"></div>
+                        <div class="chip-line"></div>
+                    </div>
+                    <div class="card-center">
+                        <span class="card-number">•••• •••• •••• 8492</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-info-group">
+                            <span class="card-label">INSTITUIÇÃO</span>
+                            <span class="card-value">E.E. Calhim Manoel Abud</span>
+                        </div>
+                        <div class="card-info-group text-right">
+                            <span class="card-label">VALIDADE</span>
+                            <span class="card-value">12/2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-face card-back">
+                    <div class="qr-code-box">
+                        <div class="qr-grid">
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                        </div>
+                    </div>
+                    <span class="card-back-text">Aproxime da máquina de recarga</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="balance-section">
+            <div class="balance-card">
+                <span class="balance-title">Saldo Escolar</span>
+                <span class="balance-value">48 <small>passagens</small></span>
+            </div>
+            <div class="balance-card">
+                <span class="balance-title">Carteira Digital</span>
+                <span class="balance-value">R$ 25,00</span>
+            </div>
+        </div>
+
+        <div class="lines-section">
+            <h2>Linhas Próximas</h2>
+            <div class="line-item">
+                <div class="line-badge">6071-10</div>
+                <div class="line-details">
+                    <span class="line-name">Jardim Orion</span>
+                    <span class="line-status green">Chegando em 4 min</span>
+                </div>
+            </div>
+            <div class="line-item">
+                <div class="line-badge">819C-10</div>
+                <div class="line-details">
+                    <span class="line-name">Metrô Conceição / Jabaquara</span>
+                    <span class="line-status">Próximo: 15 min</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="btn-primary" onclick="simularUso()">Simular Catraca</button>
+    </section>
 
 </body>
 
