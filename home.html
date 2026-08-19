@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel - Bilhete Único Estudantil</title>
+    <link rel="stylesheet" href="../Styles/style.css">
+    <script src="../scripts/script.js" defer></script>
+</head>
+
+<body>
+
+    <main class="app-container">
+        <header class="app-header">
+            <div class="user-profile-info">
+                <div class="user-welcome">
+                    <span class="welcome-label">Bem-vindo de volta,</span>
+                    <h1 id="student-name">Kayk Martins</h1>
+                </div>
+            </div>
+            <button onclick="logout()" class="logout-btn" title="Encerrar Sessão"><a href="index.html"></a>Sair</button>
+        </header>
+
+        <section class="card-flip-container" onclick="flipCard()" role="button" aria-label="Virar cartão virtual">
+            <div class="virtual-card">
+                <div class="card-face card-front">
+                    <div class="card-top">
+                        <span class="card-brand">BILHETE ÚNICO</span>
+                        <span class="card-type">ESTUDANTE</span>
+                    </div>
+                    <div class="card-chip">
+                        <div class="chip-line"></div>
+                        <div class="chip-line"></div>
+                    </div>
+                    <div class="card-center">
+                        <span class="card-number">•••• •••• •••• 8492</span>
+                    </div>
+                    <div class="card-bottom">
+                        <div class="card-info-group">
+                            <span class="card-label">INSTITUIÇÃO</span>
+                            <span class="card-value">E.E. Calhim Manoel Abud</span>
+                        </div>
+                        <div class="card-info-group text-right">
+                            <span class="card-label">VALIDADE</span>
+                            <span class="card-value">12/2026</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-face card-back">
+                    <div class="qr-code-box">
+                        <div class="qr-grid">
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel light"></div>
+                            <div class="qr-pixel"></div>
+                            <div class="qr-pixel"></div>
+                        </div>
+                    </div>
+                    <span class="card-back-text">Aproxime da maquina de recarga para recarregar</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="balance-section">
+            <div class="balance-card">
+                <span class="balance-title">Saldo Escolar</span>
+                <span class="balance-value">48 <small>passagens</small></span>
+            </div>
+            <div class="balance-card">
+                <span class="balance-title">Carteira Digital</span>
+                <span class="balance-value">R$ 25,00</span>
+            </div>
+        </section>
+
+        <section class="lines-section">
+            <h2>Linhas Próximas</h2>
+            <div class="line-item">
+                <div class="line-badge">6071-10</div>
+                <div class="line-details">
+                    <span class="line-name">Jardim orion</span>
+                    <span class="line-status green">Chegando em 4 min</span>
+                </div>
+            </div>
+            <div class="line-item">
+                <div class="line-badge">819C-10</div>
+                <div class="line-details">
+                    <span class="line-name">Metrô Conceição / Jabaquara</span>
+                    <span class="line-status">Próximo: 15 min</span>
+                </div>
+            </div>
+            <div class="line-item">
+                <div class="line-badge">199D-01</div>
+                <div class="line-details">
+                    <span class="line-name">Vila Mariana / Centro</span>
+                    <span class="line-status">Próximo: 22 min</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="actions-section">
+            <button class="action-btn primary" onclick="simularUso()">Simular Catraca</button>
+        </section>
+    </main>
+
+</body>
+
+</html>
