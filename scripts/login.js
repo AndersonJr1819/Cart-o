@@ -38,7 +38,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const senhaInput = loginForm.querySelector('input[type="password"]').value;
 
         if (usuarioInput && senhaInput) {
-            showToast('Boas-vindas de volta! Seu acesso foi validado com sucesso.');
+            showToast('Boas-vindas de volta! Redirecionando para o painel...');
+            
+            setTimeout(() => {
+                window.location.href = '../pages/bilhete.html';
+            }, 2000);
         }
     });
 

@@ -9,16 +9,19 @@
 </head>
 <body>
 
-    <div class="app-container">
+    <main class="app-container">
         <header class="app-header">
-            <div class="user-welcome">
-                <span class="welcome-label">Olá,</span>
-                <h1 id="student-name">Estudante</h1>
+            <div class="user-profile-info">
+                <div class="avatar-placeholder">KM</div>
+                <div class="user-welcome">
+                    <span class="welcome-label">Bem-vindo de volta,</span>
+                    <h1 id="student-name">Kayk Martins</h1>
+                </div>
             </div>
-            <button onclick="logout()" class="logout-btn">Sair</button>
+            <button onclick="logout()" class="logout-btn" title="Encerrar Sessão">Sair</button>
         </header>
 
-        <div class="card-flip-container" onclick="flipCard()">
+        <section class="card-flip-container" onclick="flipCard()" role="button" aria-label="Virar cartão virtual">
             <div class="virtual-card">
                 <div class="card-face card-front">
                     <div class="card-top">
@@ -30,7 +33,7 @@
                         <div class="chip-line"></div>
                     </div>
                     <div class="card-center">
-                        <span class="card-number">KAYK Martins 8492</span>
+                        <span class="card-number">•••• •••• •••• 8492</span>
                     </div>
                     <div class="card-bottom">
                         <div class="card-info-group">
@@ -88,25 +91,25 @@
                     <span class="card-back-text">Aproxime da maquina de recarga para recarregar</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="balance-section">
+        <section class="balance-section">
             <div class="balance-card">
-                <span class="balance-title">Saldo Escolar (Cotas)</span>
+                <span class="balance-title">Saldo Escolar</span>
                 <span class="balance-value">48 <small>passagens</small></span>
             </div>
             <div class="balance-card">
-                <span class="balance-title">Carteira / Recarga</span>
+                <span class="balance-title">Carteira Digital</span>
                 <span class="balance-value">R$ 25,00</span>
             </div>
-        </div>
+        </section>
 
-        <div class="lines-section">
+        <section class="lines-section">
             <h2>Linhas Próximas</h2>
             <div class="line-item">
-                <div class="line-badge">809L-10</div>
+                <div class="line-badge">6071-10</div>
                 <div class="line-details">
-                    <span class="line-name">Terminal Pirituba / Lapa</span>
+                    <span class="line-name">Jardim orion</span>
                     <span class="line-status green">Chegando em 4 min</span>
                 </div>
             </div>
@@ -124,12 +127,12 @@
                     <span class="line-status">Próximo: 22 min</span>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="actions-section">
+        <section class="actions-section">
             <button class="action-btn primary" onclick="simularUso()">Simular Catraca</button>
-        </div>
-    </div>
+        </section>
+    </main>
 
 </body>
 </html>
